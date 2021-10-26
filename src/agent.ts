@@ -12,7 +12,7 @@ import { CTOKEN_ADDRESSES, ABI } from './constants'
 const TOKEN_NAME = 'cUSDC' // cToken pool's name which you want to monitor
 const MINIMUM_THRESHOLD_BPS = 1000 // 1000bps = 10 %
 const WINDOW_SECONDS = 60 * 3600 // 60 min
-const utilizationRateMap = new Map<number, BigNumber>()
+const utilizationRateMap = new Map<number, BigNumber>() // Store utilization rates for each block within a specified window
 
 const provider = new ethers.providers.JsonRpcProvider(getJsonRpcUrl())
 
